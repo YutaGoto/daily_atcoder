@@ -8,12 +8,13 @@ fn main() {
         process::exit(0x0100);
     }
 
-    for c in 0..26 {
-        for d in 0..15 {
-            if n == c*d {
+    for c in 0..27 {
+        for d in 0..16 {
+            let cost: usize = 4*c + 7*d;
+            if n == cost {
                 println!("Yes");
                 process::exit(0x0100);
-            } else if n < c*d {
+            } else if n < cost {
                 break;
             }
         }
